@@ -1,0 +1,22 @@
+{
+    "name": "gekko/nginx-console",
+    "version": "0.1.0",
+    "description": "The Gekko Nginx Console Package.",
+    "license": "MIT",
+    "homepage": "https://github.com/gekko-framework",
+    "authors": [
+        {
+            "name": "Leonardo Brugnara",
+            "email": "lfbrugnara@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "gekko/console": "^0.1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Gekko\\": "src/"
+        }
+    }
+}
