@@ -43,7 +43,7 @@ class NginxConfiguration
     public function __toString() : string
     {
         return <<<NGINX
-            worker_processes  1;
+            worker_processes  4;
 
             error_log  "{$this->tmp_dir}/logs/error.log";
             pid        "{$this->pid_file}";
@@ -73,6 +73,7 @@ class NginxConfiguration
                         root {$this->root_dir};
                         index   index.html index.htm;
                         fastcgi_pass   127.0.0.1:9123;
+                        fastcgi_buffering off;
                         fastcgi_index  index.php;
                         fastcgi_param SCRIPT_FILENAME \$document_root/index.php;
                         include        {$this->nginx_path}/conf/fastcgi_params;
